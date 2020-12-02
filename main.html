@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MyToDo</title>
+</head>
+
+<body>
+    <a href="settings.html"><img src="src\setting1.png" class="Settings"></a>
+    <div id="Time" class="Time"></div>
+    <div id="Container" class="Container">
+        <div>
+            <H2>Какие планы?</H2>
+            <input id="task" type="text" placeholder="Введите задачу">
+        </div>
+        <input id="Ok" type="button" value="Подтвердить" class="Ok">
+        <div id="tasks"></div>
+        <div class="Bottom">
+            Сортировка:
+            <label class="Check-container">Все
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="Check-container">Только невыполненые
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="Check-container">Только выполненые
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+    <script src="clock.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
