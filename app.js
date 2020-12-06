@@ -22,7 +22,6 @@ function createLi(index, bool, value) {
     let bin = `<input type="image" id = "bin" src="src/garbage.png" class = "Bin">`;
     let update = `<input type="image" id ="update" src="src/update.png" class = "Bin">`;
     let li = `<li id="${index}" data-is = "${bool}">${value} ${bin} ${update}</li>`
-    let container = `<div display = "inline">${li} ${bin} ${update}</div>`
     return li;
 }
 
@@ -33,13 +32,11 @@ function deleteTask(elem, arr) {
 }
 
 function updateLi(elem, arr) {
-    let childs = elem.childNodes;
-    console.log(childs);
-    let text = childs[elem.id].textContent;
-    let input = `<input id="task" type="text" value="${text}">`;
-    console.log(childs);
-    childs[elem.id].replaceWith(input);
-    childs[elem.id].addEventListener('keydown', (event) => {
+    let text = elem.textContent;
+    let inputHTML = `<input id="task" type="text" value="${text}">`;
+    let input = document.createElement('input');
+    elem.replaceWith(input);
+    elem.addEventListener('keydown', (event) => {
         if (event.keyCode === 13) {
             arr[elem.id].value = childs[elem.id].value;
             childs[elem.id].outerHTML = createLi(elem.id, arr[elem.id].isComplite, arr[elem.id].value);
@@ -102,8 +99,6 @@ input.addEventListener('keydown', (event) => {
     if (event.keyCode === 13) {
         listener(input.value, toDoList);
         input.value = '';
-    } else if (event.keyCode === 17) { // для теста
-        updateLi();
     }
 });
 
