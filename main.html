@@ -8,37 +8,37 @@
     <title>MyToDo</title>
 </head>
 
-<body>
-    <a href="settings.html"><img src="src\setting1.png" class="Settings"></a>
+<body id="body">
+    <input type="image" src="src\darkMode.png" id="darkMode" class="Icons" data-mode="light">
     <div id="Time" class="Time"></div>
     <div id="Container" class="Container">
         <div>
             <H2>Какие планы?</H2>
-            <input id="task" type="text" placeholder="Введите задачу">
+            <input id="task" type="text" placeholder="Введите задачу" maxlength="30">
         </div>
         <input id="Ok" type="button" value="Подтвердить" class="Ok">
         <h3>Ваш список дел: </h3>
         <div id="tasks">Пока что пуст</div>
         <div class="Bottom">
             Сортировка:
-            <label class="Check-container">Все
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-            </label>
-
             <label class="Check-container">Только невыполненые
-                <input type="checkbox">
+                <input type="checkbox" id="notDone">
                 <span class="checkmark"></span>
             </label>
 
             <label class="Check-container">Только выполненые
-                <input type="checkbox">
+                <input type="checkbox" id="done">
+                <span class="checkmark"></span>
+            </label>
+            <label class="Check-container">Корзина
+                <input type="checkbox" id="bin">
                 <span class="checkmark"></span>
             </label>
         </div>
     </div>
     <script src="clock.js"></script>
-    <script src="appTest.js"></script>
+    <script src="app.js"></script>
+    <script src="setBack.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,6 @@
-html {
-    background-image: url(src/light_background1.jpg);
-}
-
 body {
     font-size: 200%;
+    background-image: url(src/light_background.jpg);
 }
 
 .Time {
@@ -54,7 +51,7 @@ input {
     border-radius: 10px;
 }
 
-.Settings {
+.Icons {
     width: 30px;
     height: 30px;
     border-bottom: 0;
